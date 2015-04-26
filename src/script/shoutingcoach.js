@@ -1,6 +1,6 @@
 /* jshint browser:true */
 /* global require */
-require(["painting", "xaja", "jquery" ],
+require(["./fe/painting", "./fe/xaja", "jquery" ],
         function(paint, xaja, $) {
             "use strict";
 

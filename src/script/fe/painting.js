@@ -1,6 +1,6 @@
 /* jshint browser:true */
 /* global define, buzz */
-define(["../be/timeutensils", "gauges", "../be/workout","../../lib/buzz", "jquery" ],
+define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jquery" ],
         function(timeutensils, gauges, workout, _buzz, $) {
             "use strict";
 

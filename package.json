@@ -13,14 +13,20 @@
       "plato": "^1.4.0", 
       "nsp": "^1.0.1"      
   },
-  "main": "build.workout.js",
   "scripts": {
     "test": "mocha -R dot src/script/test/",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha src/script/test", 
     "nsp": "nsp package", 
     "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/", 
     "lint": "jshint src/script --verbose --show-non-errors", 
-    "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info"
+    "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
+    "clean": "rm -rf build",
+    "build-au": "cp -R src/audio build/audio",
+    "build-style": "cp -R src/style build/style",
+    "build-html": "cp src/index.html build/. && cp src/workouts.json build/.",
+    "build-lib": "mkdir build/lib && cp -R src/lib/require.js build/lib/require.js",
+    "build-js": "r.js -o baseUrl=\"./src/script\" name=\"shoutingcoach\" out=\"build/script/shoutingcoach.js\"",
+    "build": "npm run build-js && npm run build-style && npm run build-html && npm run build-lib && npm run build-au"
   },
   "keywords": [
     "workout",
