@@ -1,52 +1,4 @@
 {"workouts":[
-    {"name": "Short debug exercises",
-     "exercises":[
-         {"name": "First short exercise",
-          "duration": 4,
-          "sound":"firstexercise"
-         },
-         {"name": "Second short exercise",
-          "duration": 2,
-          "sound":"secondexercise"
-         },
-         {"name": "No sound available",
-          "duration": 2,
-          "sound":"nosoundavailable"
-         },
-         {"name": "Third short exercise, with a really long name. And a unicorn \u7282. Plow.", 
-          "duration": 2
-         },
-         {"name": "\u73e0\u8336",
-          "duration": 3,
-          "sound":"lastexercise"
-         }
-     ]
-    },
-    {"name":"Demo workout",
-    "exercises":[
-        {"name":"Warming up",
-         "duration": 180
-        },
-        {"name":"Sumo squat lateral raise",
-         "categories": ["legs"],
-         "duration": 60
-        },
-        {"name":"Push ups",
-         "categories": ["arms", "breast"],
-         "duration": 60
-        },
-        {"name":"Sit ups",
-         "categories": ["core"],
-         "duration": 60
-        },
-        {"name":"Calf stretch - left leg",
-         "duration": 30
-        },
-        {"name":"Calf stretch - right leg",
-         "duration": 30
-        }
-    ]
-    },
     {"name":"The scientific 7-minute workout",
     "sources":["http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/", "http://journals.lww.com/acsm-healthfitness/Fulltext/2013/05000/HIGH_INTENSITY_CIRCUIT_TRAINING_USING_BODY_WEIGHT_.5.aspx"],
     "exercises":[
@@ -166,26 +118,6 @@
         }
     ]
     },
-    {"name": "Some new ones",
-     "exercises":[
-         {"name": "Seated triceps press",
-          "categories": ["triceps"],
-          "duration": 4
-         },
-         {"name": "Cross body crunch",
-          "categories": ["abdominals"],
-          "duration": 2
-         },
-         {"name": "Alternate heel touchers",
-          "categories": ["abdominals"],
-          "duration": 2
-         },
-         {"name": "Superman",
-         "categories": ["lowerback"],
-          "duration": 2
-         }
-     ]
-    },
     {"name": "Sunday drill",
      "exercises":[
          {"name": "Warming up - run in place",
@@ -295,6 +227,74 @@
          {"name": "-=Done=-",
           "duration": 1,
           "sound":"none"
+         }
+     ]
+    },
+    {"name": "Short debug exercises",
+     "exercises":[
+         {"name": "First short exercise",
+          "duration": 4,
+          "sound":"firstexercise"
+         },
+         {"name": "Second short exercise",
+          "duration": 2,
+          "sound":"secondexercise"
+         },
+         {"name": "No sound available",
+          "duration": 2,
+          "sound":"nosoundavailable"
+         },
+         {"name": "Third short exercise, with a really long name. And a unicorn \u7282. Plow.", 
+          "duration": 2
+         },
+         {"name": "\u73e0\u8336",
+          "duration": 3,
+          "sound":"lastexercise"
+         }
+     ]
+    },
+    {"name":"Demo workout",
+    "exercises":[
+        {"name":"Warming up",
+         "duration": 180
+        },
+        {"name":"Sumo squat lateral raise",
+         "categories": ["legs"],
+         "duration": 60
+        },
+        {"name":"Push ups",
+         "categories": ["arms", "breast"],
+         "duration": 60
+        },
+        {"name":"Sit ups",
+         "categories": ["core"],
+         "duration": 60
+        },
+        {"name":"Calf stretch - left leg",
+         "duration": 30
+        },
+        {"name":"Calf stretch - right leg",
+         "duration": 30
+        }
+    ]
+    },
+    {"name": "Some new ones",
+     "exercises":[
+         {"name": "Seated triceps press",
+          "categories": ["triceps"],
+          "duration": 4
+         },
+         {"name": "Cross body crunch",
+          "categories": ["abdominals"],
+          "duration": 2
+         },
+         {"name": "Alternate heel touchers",
+          "categories": ["abdominals"],
+          "duration": 2
+         },
+         {"name": "Superman",
+         "categories": ["lowerback"],
+          "duration": 2
          }
      ]
     },
