@@ -1,5 +1,5 @@
 /* jshint browser:true */
-/* global define, ActiveXObject */
+/* global define */
 define([], function() {
     "use strict";
     var HTTP_STATUS_OK = 200;
