@@ -20,7 +20,7 @@
     "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/", 
     "lint": "jshint src/script --verbose --show-non-errors", 
     "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
-    "clean": "rm -rf build",
+    "clean": "rm -rf build/style build/audio build/script build/lib build/index.html build/workouts.json",
     "build-au": "cp -R src/audio build/audio",
     "build-style": "cp -R src/style build/style",
     "build-html": "cp src/index.html build/. && cp src/workouts.json build/.",
