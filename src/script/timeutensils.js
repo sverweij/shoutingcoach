@@ -25,6 +25,9 @@ define(function (){
     // private functions
     return {
         formatTime : function (pMilliSeconds, pShowMillis) {
+            if (!pMilliSeconds){
+                pMilliSeconds = 0;
+            }
             var lTimeStruct = millisToTimeStruct(pMilliSeconds);
             if (!pShowMillis) { pShowMillis = false; }
             return formatTimeBlob (lTimeStruct.minutes) + ":" +
