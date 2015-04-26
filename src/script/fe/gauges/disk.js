@@ -1,6 +1,6 @@
 /* jshint browser:true */
 /* global define */
-define(["gauges/circle"], function(circle) {
+define(["./circle"], function(circle) {
     "use strict";
 
     function DiskGauge (pCanvas, pParts, pCoords, pRadius, pColors) {

@@ -1,6 +1,6 @@
 /* jshint browser:true */
 /* global define */
-define(["gauges/circle", "gauges/disk"], function(circle, disk) {
+define(["./gauges/circle", "./gauges/disk"], function(circle, disk) {
     "use strict";
     
     return {

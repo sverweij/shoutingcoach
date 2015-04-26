@@ -1,6 +1,6 @@
 /* jshint browser:true */
 /* global define, buzz */
-define(["timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
+define(["../be/timeutensils", "gauges", "../be/workout","../../lib/buzz", "jquery" ],
         function(timeutensils, gauges, workout, _buzz, $) {
             "use strict";
 
@@ -242,12 +242,12 @@ define(["timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     }
     
     function sizeCanvasToWindow(pCanvas) {
-        if ($(window).width() < window.innerHeight()) {
-            pCanvas.width  = window.innerWidth();
-            pCanvas.height = window.innerWidth();
+        if (window.innerWidth < window.innerHeight) {
+            pCanvas.width  = window.innerWidth;
+            pCanvas.height = window.innerWidth;
         } else {
-            pCanvas.width  = window.innerHeight();
-            pCanvas.height = window.innerHeight();
+            pCanvas.width  = window.innerHeight;
+            pCanvas.height = window.innerHeight;
         }
         resizeGauges(pCanvas);
         repositionCanvas();

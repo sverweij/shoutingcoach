@@ -3,7 +3,7 @@ if ( typeof define !== 'function') {
     var define = require('amdefine')(module);
 }
 
-define(["exercise"], function(exercise) {
+define(["./exercise"], function(exercise) {
     "use strict";
 
     function Workout (pName) {
