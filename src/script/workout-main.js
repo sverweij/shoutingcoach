@@ -43,15 +43,6 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
 
     $(document).ready(function(){
         centerEverything();
-        $("#StartStop").bind({
-            click : startStopOnclick
-        });
-        $("#Reset").bind({
-            click : resetOnclick
-        });
-        $("#CloseSettings").bind({
-            click : workoutOnclick
-        });
         window.onresize = centerEverything;
         /* 
          * workaround to prevent two start stop events getting fired in short
@@ -60,39 +51,35 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
         $("#StartStop").bind({
             keydown : function() {
                 startStopButtonPressing = true;
-            }
-        });
-        $("#StartStop").bind({
+            },
             keyup : function() {
                 startStopButtonPressing = false;
-            }
+            },
+            click : startStopOnclick
         });
         $("#Reset").bind({
             keydown : function() {
                 resetButtonPressing = true;
-            }
-        });
-        $("#Reset").bind({
+            },
             keyup : function() {
                 resetButtonPressing = false;
-            }
+            },
+            click : resetOnclick
         });
         $("#CloseSettings").bind({
             keydown : function() {
                 closeSettingsButtonPressing = true;
-            }
-        });
-        $("#CloseSettings").bind({
+            },
             keyup : function() {
                 closeSettingsButtonPressing = false;
-            }
+            },
+            click : workoutOnclick
         });
         $("#WorkoutList").bind({
-            onChange : workoutListOnchange
+            change : workoutListOnchange,
         });
         $("#workout").bind("click", workoutOnclick);
         $("#ToggleSound").bind("click", toggleSoundOnclick);
-        $("#WorkoutList").bind("change", workoutListOnchange);
         $("body").bind({
             keydown : function(e) {
                 var lKey = e.keyCode;
