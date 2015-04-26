@@ -6,7 +6,6 @@
       "requirejs": "^2.1.17"
   },
   "devDependencies": {
-      "node-sass": "^2.1.1", 
       "mocha": "^2.2.4", 
       "codeclimate-test-reporter": "^0.0.4", 
       "jshint": "^2.7.0", 
