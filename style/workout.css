@@ -1,0 +1,146 @@
+body {
+    color            : white;
+    background-color : black;
+    margin           : 0;
+    border           : 0;
+    padding          : 0;
+    font-family      : Helvetica, Arial, Sans-serif;
+    font-size        : 20pt;
+}
+h1 {
+    font-size        : 1.1em;
+}
+a {
+    color            : white;
+}
+input[type='button'] {
+    height           : 1.5em;
+    font-size        : 1em;
+    border           : none;
+    border-radius    : 0.3em;
+    font-family      : inherit;
+}
+@media screen and (min-width: 49em) {
+    body { font-size : 30pt; }
+}
+@media screen and (min-width: 69em) {
+    body { font-size : 40pt; }
+}
+@media screen and (min-width: 79em) {
+    body { font-size : 53pt; }
+}
+@media screen and (max-width: 29em) {
+    body { font-size : 12pt; }
+
+    .hideonmobile {
+        display          : none;
+    }
+}
+
+div.numbers {
+}
+#workout, #settings {
+    color            : #999;
+    width            : 100%;
+    margin-top       : 1em;
+    font-size        : 0.7em;
+}
+#workout {
+    z-index          : 0;
+    height           : 2em;
+    text-align       : center;
+}
+#workout:hover {
+    background-color : #444;
+    color            : white;
+}
+#settings {
+    z-index          : 1;
+    display          : none;
+    background-color : #444;
+    text-align       : left;
+    color            : inherit;
+    padding-top      : 0.25em;
+    padding-bottom   : 0.25em;
+    height : 1.5em;
+}
+
+#settings select {
+    font-size        : 0.8em;
+    max-width        : 70%;
+    margin-left      : 0.5em;
+}
+#CloseSettings {
+    float            : right;
+    border           : none;
+    margin-right     : 0.25em;
+    padding-left     : 0.25em;
+    padding-right    : 0.25em;
+    color            : inherit;
+    background-color : red;
+    font             : inherit;
+    text-align       : center;
+    border-radius    : 0.15em;
+    text-shadow      : black +0.04em +0.04em +0.04em;
+}
+#everything {
+    position         : relative;
+    z-index          : 0;
+    top              : 0;
+    margin           : 0;
+}
+#bgcanvas {
+    position         : absolute;
+    background-color : inherit;
+    z-index          : -1;
+}
+#exercisename {
+    text-align       : center;
+    font-size        : 1.2em;
+}
+#exercisetime {
+    text-align       : center;
+    font-size        : 3.5em;
+}
+#buttons {
+    text-align       : center;
+}
+#buttons input[type='button'] {
+    width            : 5.5em;
+}
+#buttons #Reset {
+    color            : #444;
+    background-color : #252525;
+}
+#buttons .paused {
+    color            : white;
+    background-color : green;
+}
+#buttons .running {
+    color            : #444;
+    background-color : #252525;
+}
+@media screen and (max-width: 29em) {
+    #CloseSettings {
+        text-align   : right;
+        width        : 100%;
+        right        : inherit;
+        top          : inherit;
+    }
+    #settings {
+        background-color: black;
+        color : pink;
+    }
+    select {
+        max-width    : 100%;
+        min-width    : 100%;
+        margin-left  : 0em;
+        margin-right  : 0em;
+    }
+    label, select, #CloseSettings {
+        position     : static;
+        display      : block;
+        font-size    : inherit;
+        float        : none;
+    }
+}

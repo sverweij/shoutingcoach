@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+<html manifest="workout.appcache">
+-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;  user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="description" content="Fitness scheduler">
+    <meta name="keywords" content="Fitness schedule">
+   
+    <title>Workout (loading ...)</title>
+    <link rel="stylesheet" href="style/workout.css"
+          type="text/css" media="screen">
+    <script data-main="script/shoutingcoach.js"
+          src="lib/require.js"></script>
+</head>
+<body>
+<canvas id="bgcanvas">
+<!-- silently ignore if not supported -->
+</canvas>
+<div id="everything">
+    <div id="exercise">
+        <div id="exercisename">-- no exercise loaded --</div>
+        <div id="exercisetime" class="numbers">03:14</div>
+    </div>
+    <div id="buttons">
+        <form>
+            <input type="button" id="StartStop" value="Start">
+            <input type="button" id="Reset" value="Reset">
+        </form>
+    </div>
+    <div id="workout">
+        <div id="workoutname">-- no workout loaded --</div>
+        <div id="workouttime" class="numbers">06:28</div>
+    </div>
+    <div id="settings">
+        <input type="button" id="CloseSettings" value="x">
+        <label for="WorkoutList"><span class="hideonmobile">Workout: </span>
+            <select id="WorkoutList">
+                <option>No exercises found yet</option>
+            </select>
+        </label>
+    </div>
+</div>
+
+</body>
+</html>
