@@ -1,15 +1,17 @@
 ### SHOUTING COACH :loudspeaker:
 
-Excercising app. Created because other apps 
+Excercising app. Helps me work out. Created because other apps 
 - didn't let me create a custom workout    
-  so I can change that one impossible 'spine cracker cross crunches' with  something doable
+  so I can change that one impossible 'spine cracker cross crunches' with something doable
 - didn't blow up on HUGE SCREENS   
-  so I could read it without glasses
+  so I can read it without glasses
+- didn't have BIG BUTTONS and hard to miss keyboard short cuts    
+  hitting tiny buttons when you're working out is hard
 
 ### uses
 these MIT licensed libraries:
 - require.js
-- buzz.js (<- the only sound lib I could find that plays in _every_ dmn browser)
+- buzz.js (<- the only sound lib I could find that played in _every_ dmn browser)
 - jquery (plan to get rid of that)
 
 ### licensed
@@ -21,4 +23,4 @@ these MIT licensed libraries:
 [![Dependency Status](https://david-dm.org/sverweij/shoutingcoach.svg)](https://david-dm.org/sverweij/shoutingcoach)
 [![devDependency Status](https://david-dm.org/sverweij/shoutingcoach/dev-status.svg)](https://david-dm.org/sverweij/shoutingcoach#info=devDependencies)
 
-So no fr*king code coverage yet? You got that right.
+So no fr*king code coverage yet? You've got _that_ right.
