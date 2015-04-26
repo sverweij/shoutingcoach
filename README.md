@@ -16,6 +16,7 @@ these MIT licensed libraries:
 [GPLv3](LICENSE)
 
 ### flair section
+[![Build Status](https://travis-ci.org/sverweij/shoutingcoach.svg?branch=master)](https://travis-ci.org/sverweij/shoutingcoach)
 [![Code Climate](https://codeclimate.com/github/sverweij/shoutingcoach/badges/gpa.svg)](https://codeclimate.com/github/sverweij/shoutingcoach)
 [![Dependency Status](https://david-dm.org/sverweij/shoutingcoach.svg)](https://david-dm.org/sverweij/shoutingcoach)
 [![devDependency Status](https://david-dm.org/sverweij/shoutingcoach/dev-status.svg)](https://david-dm.org/sverweij/shoutingcoach#info=devDependencies)
