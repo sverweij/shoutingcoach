@@ -129,7 +129,7 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
                 }
             }
         });
-        xaja.ajax("./workouts.json", parseWorkoutJSON);
+        xaja.ajax("./workouts.json", parseWorkoutJSON, function(){});
         showCurrentState();
     });
 
@@ -167,8 +167,7 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     }
 
     function workoutListOnchange() {
-        var i = $("#WorkoutList").val(); 
-        currentWorkout = workouts[i];
+        currentWorkout = workouts[window.WorkoutList.value];
         currentWorkout.reset();
         initWorkout(currentWorkout.name, currentWorkout.duration);
         initExercise(currentWorkout.exercises[0].name,
@@ -179,9 +178,8 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
 
     }
 
-    function parseWorkoutJSON(pData) {
-        var x = JSON.parse(pData);
-        // var totalDuration = 0;
+    function parseWorkoutJSON(pEvent) {
+        var x = JSON.parse(pEvent.target.response);
         
         $("#WorkoutList").empty();
         x.workouts.forEach(function(pWorkout, pWorkoutNr){
@@ -208,24 +206,23 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     function enableUI(pBool){
         if (!pBool) { pBool = true; }
         UIEnabled = pBool;
-
     }
 
     function showExerciseTime(pMilliSeconds) {
         if (!pMilliSeconds) { pMilliSeconds = 0;}
-        $("#exercisetime").text(timeutensils.formatTime(pMilliSeconds));
+        window.exercisetime.textContent = timeutensils.formatTime(pMilliSeconds);
         exerciseGauge.draw(pMilliSeconds);
     }
 
     function initExercise (pName, pDuration){
-        $("#exercisename").text(pName);
+        window.exercisename.textContent = pName;
         exerciseGauge.setParts(pDuration);
         showExerciseTime(0);
     }
 
     function showWorkoutTime(pMilliSeconds) {
         if (!pMilliSeconds) { pMilliSeconds = 0;}
-        $("#workouttime").text(timeutensils.formatTime(pMilliSeconds));
+        window.workouttime.textContent = timeutensils.formatTime(pMilliSeconds);
         workoutGauge.draw(pMilliSeconds);
         document.title =
             "-" +
@@ -235,29 +232,35 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     }
 
     function initWorkout (pName, pDuration) {
-        $("#workoutname").text(pName);
+        window.workoutname.textContent = pName;
         workoutGauge.setParts(pDuration);
     }
 
     function updateStartStopButtonState(){
-        if (currentWorkout.getState() === "done") {
-            $("#StartStop").val("Restart");
-            $("#StartStop").removeClass("running");
-            $("#StartStop").addClass("paused");
-            document.title = "Workout";
-        } else if (currentWorkout.state === "running") {
-            $("#StartStop").val("Pause");
-            $("#StartStop").removeClass("paused");
-            $("#StartStop").addClass("running");
-        } else if (currentWorkout.state === "reset") {
-            $("#StartStop").val("Start");
-            $("#StartStop").removeClass("running");
-            $("#StartStop").addClass("paused");
-            document.title = "Workout";
-        } else if (currentWorkout.state === "paused") {
-            $("#StartStop").val("Resume");
-            $("#StartStop").removeClass("running");
-            $("#StartStop").addClass("paused");
+        var lState = currentWorkout.getState();
+        switch (lState){
+            case("done"): {
+                window.StartStop.value = "Restart";
+                window.StartStop.className = "paused";
+                document.title = "Workout";
+            }
+            break;
+            case("running"): {
+                window.StartStop.value = "Pause";
+                window.StartStop.className = "running";
+            }
+            break;
+            case("reset"): {
+                window.StartStop.value = "Start";
+                window.StartStop.className = "paused";
+                document.title = "Workout";
+            }
+            break;
+            case("paused"): {
+                window.StartStop.value = "Resume";
+                window.StartStop.className = "paused";
+            }
+            break;
         }
     }
     
@@ -270,14 +273,9 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
                         autoplay: true
                     }
                 );                
-                // customSound.bindOnce("dataunavailable", function() {
-                //     // log.ERROR("customSound data unavailable");
-                // }).bindOnce("empty", function() {
-                //     // log.ERROR("customSound empty");
-                // }).bindOnce("error", function() {
-                //     // log.ERROR(customSound.sound.currentSrc + " not available");
-                //     beepSound.play();
-                // });
+                _customSound.bindOnce("error", function() {
+                    beepSound.play();    
+                });
             } else {
                 beepSound.play();
             }
@@ -298,9 +296,9 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
 
     function showSettingState () {
         if (soundEnabled){
-            $("#ToggleSound").attr("checked", "soundOn");
+            window.ToggleSound.checked="soundOn";
         } else { 
-            $("#ToggleSound").removeAttr ("checked");
+            window.ToggleSound.checked=null;
         }
 
     }
@@ -344,15 +342,8 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     }
 
     function centerEverything () {
-        var lTop = ($(window).height() - $("#everything").height())/2;
-        $("#everything").css("top", lTop);
+        $("#everything").css("top", (window.innerHeight - window.everything.clientHeight)/2);
         sizeCanvasToWindow(myCanvas);
-
-        var lCanvasLeft = ($(window).width() - $("#bgcanvas").width())/2;
-        var lCanvasTop = ($(window).height() - $("#bgcanvas").height())/2;
-        $("#bgcanvas").css("left", lCanvasLeft);
-        $("#bgcanvas").css("top", lCanvasTop);
-
     }
 
     function resizeGauges(pCanvas){
@@ -373,7 +364,11 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
             }
         }    
     }
-
+    function repositionCanvas(){
+        $("#bgcanvas").css("left", (window.innerWidth - window.bgcanvas.clientWidth)/2);
+        $("#bgcanvas").css("top", (window.innerHeight - window.bgcanvas.clientHeight)/2);
+    }
+    
     function sizeCanvasToWindow(pCanvas) {
         if ($(window).width() < $(window).height()) {
             pCanvas.width  = $(window).width();
@@ -383,6 +378,7 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
             pCanvas.height = $(window).height();
         }
         resizeGauges(pCanvas);
+        repositionCanvas();
     }
 }); // require
 /*
