@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "helps you work out",
   "dependencies":{
-      "amdefine": "^0.1.0", 
       "requirejs": "^2.1.17"
   },
   "devDependencies": {
@@ -26,7 +25,8 @@
   },
   "keywords": [
     "workout",
-    "fitness"
+    "fitness",
+    "coach"
   ],
   "repository": {
     "type": "git", 
