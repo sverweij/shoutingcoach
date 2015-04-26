@@ -1,0 +1,558 @@
+{"workouts":[
+    {"name": "Short debug exercises",
+     "exercises":[
+         {"name": "First short exercise",
+          "duration": 4,
+          "sound":"firstexercise"
+         },
+         {"name": "Second short exercise",
+          "duration": 2,
+          "sound":"secondexercise"
+         },
+         {"name": "No sound available",
+          "duration": 2,
+          "sound":"nosoundavailable"
+         },
+         {"name": "Third short exercise, with a really long name. And a unicorn \u7282. Plow.", 
+          "duration": 2
+         },
+         {"name": "\u73e0\u8336",
+          "duration": 3,
+          "sound":"lastexercise"
+         }
+     ]
+    },
+    {"name":"Demo workout",
+    "exercises":[
+        {"name":"Warming up",
+         "duration": 180
+        },
+        {"name":"Sumo squat lateral raise",
+         "categories": ["legs"],
+         "duration": 60
+        },
+        {"name":"Push ups",
+         "categories": ["arms", "breast"],
+         "duration": 60
+        },
+        {"name":"Sit ups",
+         "categories": ["core"],
+         "duration": 60
+        },
+        {"name":"Calf stretch - left leg",
+         "duration": 30
+        },
+        {"name":"Calf stretch - right leg",
+         "duration": 30
+        }
+    ]
+    },
+    {"name":"The scientific 7-minute workout",
+    "sources":["http://well.blogs.nytimes.com/2013/05/09/the-scientific-7-minute-workout/", "http://journals.lww.com/acsm-healthfitness/Fulltext/2013/05000/HIGH_INTENSITY_CIRCUIT_TRAINING_USING_BODY_WEIGHT_.5.aspx"],
+    "exercises":[
+        {"name":"Jumping jacks",
+         "categories": ["warming up", "total body"],
+         "duration": 30,
+          "sound":"jumpingjacks"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Wall sit",
+         "categories": ["lower body"],
+         "duration": 30,
+         "sound":"wallsit"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Push ups",
+         "categories": ["upper body"],
+         "duration": 30,
+         "sound":"pushups"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Abdominal crunch",
+         "categories": ["core"],
+         "duration": 30,
+         "sound":"abdominalcrunches"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Step-up onto chair",
+         "categories": ["total body"],
+         "duration": 30,
+         "sound":"stepups"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Squats",
+         "categories": ["lower body"],
+         "duration": 30,
+         "sound":"squats"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Triceps dip on chair",
+         "categories": ["upper  body"],
+         "duration": 30,
+         "sound":"tricepdips"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Plank",
+         "categories": ["core"],
+         "duration": 30,
+         "sound":"plank"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"High knee runs in place",
+         "categories": ["total body"],
+         "duration": 30,
+         "sound":"highkneerunsinplace"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Lunge - left",
+         "categories": ["lower body"],
+         "duration": 15,
+         "sound":"lunges"
+        },
+        {"name":"Lunge - right",
+         "categories": ["lower body"],
+         "duration": 15,
+         "sound":"switchsides"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Push-up and rotation",
+         "categories": ["upper body"],
+         "duration": 30,
+         "sound":"pushupsandrotation"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Side plank - left",
+         "categories": ["core"],
+         "duration": 15,
+         "sound":"sideplank"
+        },
+        {"name":"Side plank - right",
+         "categories": ["core"],
+         "duration": 15,
+         "sound":"switchsides"
+        }
+    ]
+    },
+    {"name": "Some new ones",
+     "exercises":[
+         {"name": "Seated triceps press",
+          "categories": ["triceps"],
+          "duration": 4
+         },
+         {"name": "Cross body crunch",
+          "categories": ["abdominals"],
+          "duration": 2
+         },
+         {"name": "Alternate heel touchers",
+          "categories": ["abdominals"],
+          "duration": 2
+         },
+         {"name": "Superman",
+         "categories": ["lowerback"],
+          "duration": 2
+         }
+     ]
+    },
+    {"name": "Sunday drill",
+     "exercises":[
+         {"name": "Warming up - run in place",
+          "duration": 120,
+          "sound":"runinplace"
+         },
+         {"name": "Warming up - two feet lateral hop ",
+          "duration": 60,
+          "sound":"twofeetlateralhop"
+         },
+         {"name": "Side lunge",
+          "duration": 60,
+          "sound":"sidelunge"
+         },
+         {"name": "Sumo squat lateral raise",
+          "duration": 60,
+          "sound":"sumosquatlateralraise"
+         },
+         {"name": "Modified plank",
+          "duration": 30,
+          "sound":"modifiedplank"
+         },
+         {"name": "Modified burpee",
+          "duration": 60,
+          "sound":"modifiedburpee"
+         },
+         {"name": "oposite arm/ leg extension - right",
+          "duration": 30,
+          "sound":"oppositearmleg"
+         },
+         {"name": "oposite arm/ leg extension - left",
+          "duration": 30,
+          "sound":"switchsides"
+         },
+         {"name": "Hip lifts",
+          "duration": 60,
+          "sound":"hiplifts"
+         },
+         {"name": "Squats",
+          "duration": 30,
+          "sound":"squats"
+         },
+         {"name": "Sit ups",
+          "duration": 60,
+          "sound":"situps"
+         },
+         {"name": "Two feet forward backward hop",
+          "duration": 60,
+          "sound":"twofeetforwardbackwardhop"
+         },
+         {"name": "modified pushups",
+          "duration": 30,
+          "sound":"modifiedpushups"
+         },
+         {"name": "squats",
+          "duration": 60,
+          "sound":"squats"
+         },
+         {"name": "oposite arm/ leg extension - right",
+          "duration": 30,
+          "sound":"oppositearmleg"
+         },
+         {"name": "oposite arm/ leg extension - left",
+          "duration": 30,
+          "sound":"switchsides"
+         },
+         {"name": "modified burpee",
+          "duration": 30,
+          "sound":"modifiedburpee"
+         },
+         {"name": "Hip lifts",
+          "duration": 60,
+          "sound":"hiplifts"
+         },
+         {"name": "Right calf stretches",
+          "duration": 30,
+          "sound":"calfstretch"
+         },
+         {"name": "Left calf stretches",
+          "duration": 30,
+          "sound":"switchsides"
+         },
+         {"name": "Hamstring stretches - right",
+          "duration": 30,
+          "sound":"hamstring"
+         },
+         {"name": "Hamstring stretches - left",
+          "duration": 30,
+          "sound":"switchsides"
+         },
+         {"name": "Pretzel Stretch - right",
+          "duration": 60,
+          "sound":"pretzel"
+         },
+         {"name": "Pretzel Stretch - left",
+          "duration": 60,
+          "sound":"switchsides"
+         },
+         {"name": "Lower back stretch - right",
+          "duration": 30,
+          "sound":"lowerback"
+         },
+         {"name": "Lower back stretch - left",
+          "duration": 30,
+          "sound":"switchsides"
+         },
+         {"name": "-=Done=-",
+          "duration": 1,
+          "sound":"none"
+         }
+     ]
+    },
+    {"name": "Sweat + shape",
+     "exercises":[
+         {"name": "light jog",
+          "duration": 120,
+          "sound":"lightjog"
+         },
+         {"name": "back pedal",
+          "duration": 60,
+          "sound":"backpedal"
+         },
+         {"name": "straight leg kicks",
+          "duration": 120,
+          "sound":"straightlegkicks"
+         },
+         {"name": "modified press ups",
+          "duration": 60,
+          "sound":"modifiedpressups"
+         },
+         {"name": "modified plank",
+          "duration": 30,
+          "sound":"modifiedplank"
+         },
+         {"name": "modified burpee",
+          "duration": 60,
+          "sound":"modifiedburpee"
+         },
+         {"name": "side lunge",
+          "duration": 120,
+          "sound":"sidelunge"
+         },
+         {"name": "2 feet forward/ backward hop",
+          "duration": 30,
+          "sound":"twofeetforwardbackwardhop"
+         },
+         {"name": "plank",
+          "duration": 60,
+          "sound":"plank"
+         },
+         {"name": "squats",
+          "duration": 120,
+          "sound":"squats"
+         },
+         {"name": "hip lifts",
+          "duration": 60,
+          "sound":"hiplifts"
+         },
+         {"name": "opposite arm/ leg extension",
+          "duration": 60,
+          "sound":"oppositearmleg"
+         },
+         {"name": "cross back lunge",
+          "duration": 30,
+          "sound":"crossbacklunge"
+         },
+         {"name": "2 feet lateral hops in place",
+          "duration": 30,
+          "sound":"twofeetlateralhop"
+         },
+         {"name": "modified tricep press ups",
+          "duration": 30,
+          "sound":"modifiedtriceppressups"
+         },
+         {"name": "alternating step back lunges",
+          "duration": 30,
+          "sound":"alternatingstepbacklunges"
+         },
+         {"name": "sumo squat with lateral raise",
+          "duration": 60,
+          "sound":"sumosquatlateralraise"
+         },
+         {"name": "reverse crunches",
+          "duration": 60,
+          "sound":"reversecrunches"
+         },
+         {"name": "squat jumps",
+          "duration": 15,
+          "sound":"squatjumps"
+         },
+         {"name": "hip lifts",
+          "duration": 60,
+          "sound":"hiplifts"
+         },
+         {"name": "modified press ups",
+          "duration": 60,
+          "sound":"modifiedpressups"
+         },
+         {"name": "modified plank",
+          "duration": 30,
+          "sound":"modifiedplank"
+         },
+         {"name": "modified burpee",
+          "duration": 60,
+          "sound":"modifiedburpee"
+         },
+         {"name": "opposite arm/ leg extension",
+          "duration": 60,
+          "sound":"oppositearmleg"
+         },
+         {"name": "squat hold",
+          "duration": 15,
+          "sound":"squathold"
+         },
+         {"name": "shoulder press",
+          "duration": 60,
+          "sound":"shoulderpress"
+         },
+         {"name": "pretzel stretch - right",
+          "duration": 60,
+          "sound":"pretzel"
+         },
+         {"name": "pretzel stretch - left",
+          "duration": 60,
+          "sound":"switchsides"
+         },
+         {"name": "lower back stretch - right",
+          "duration": 30,
+          "sound":"lowerback"
+         },
+         {"name": "lower back stretch - left",
+          "duration": 30,
+          "sound":"switchsides"
+         },
+         {"name": "standing hamstring stretch - right",
+          "duration": 60,
+          "sound":"standinghamstring"
+         },
+         {"name": "standing hamstring stretch - left",
+          "duration": 60,
+          "sound":"switchsides"
+         }
+     ]
+     },
+    {"name": "Fighter Fit",
+     "exercises":[
+         {"name": "Light jog",
+          "duration": 120,
+          "sound":"lightjog"
+         },
+         {"name": "Straight leg kicks",
+          "duration": 60,
+          "sound":"straightlegkicks"
+         },
+         {"name": "Slide and glide",
+          "duration": 60,
+          "sound":"slideandglide"
+         },
+         {"name": "Walking lunges",
+          "duration": 60,
+          "sound":"walkinglunges"
+         },
+         {"name": "Dips with legs straight",
+          "duration": 60,
+          "sound":"dipswithlegsstraight"
+         },
+         {"name": "Side lunge",
+          "duration": 60,
+          "sound":"sidelunge"
+         },
+         {"name": "Walk outs",
+          "duration": 60,
+          "sound":"walkouts"
+         },
+         {"name": "Mountain climbers",
+          "duration": 30,
+          "sound":"mountainclimbers"
+         },
+         {"name": "Russian twists",
+          "duration": 60,
+          "sound":"russiantwists"
+         },
+         {"name": "Modified burpee",
+          "duration": 30,
+          "sound":"modifiedburpee"
+         },
+         {"name": "Recover",
+          "duration": 60,
+          "sound":"recover"
+         },
+         {"name": "Deadlift",
+          "duration": 60,
+          "sound":"deadlift"
+         },
+         {"name": "Crazy Ivans",
+          "duration": 60,
+          "sound":"crazyivans"
+         },
+         {"name": "Modified press ups",
+          "duration": 60,
+          "sound":"modifiedpressups"
+         },
+         {"name": "High knee runs in place",
+          "duration": 30,
+          "sound":"highkneerunsinplace"
+         },
+         {"name": "Plank",
+          "duration": 30,
+          "sound":"plank"
+         },
+         {"name": "Recover",
+          "duration": 60,
+          "sound":"recover"
+         },
+         {"name": "Walking lunges",
+          "duration": 60,
+          "sound":"walkinglunges"
+         },
+         {"name": "Hip lifts",
+          "duration": 60,
+          "sound":"hiplifts"
+         },
+         {"name": "Alternating step back lunges",
+          "duration": 60,
+          "sound":"alternatingstepbacklunges"
+         },
+         {"name": "Knee tucks",
+          "duration": 30,
+          "sound":"kneetucks"
+         },
+         {"name": "Opposite arm/ leg supermans",
+          "duration": 30,
+          "sound":"oppositearmlegsupermans"
+         },
+         {"name": "Recover",
+          "duration": 60,
+          "sound":"recover"
+         },
+         {"name": "Arround the world lunge",
+          "duration": 120,
+          "sound":"arroundtheworldlunge"
+         },
+         {"name": "Russian twists",
+          "duration": 60,
+          "sound":"russiantwists"
+         },
+         {"name": "Two feet forward/ backward hop",
+          "duration": 30,
+          "sound":"twofeetforwardbackwardhop"
+         },
+         {"name": "Modified press ups",
+          "duration": 60,
+          "sound":"modifiedpressups"
+         },
+         {"name": "Pretzel stretch",
+          "duration": 120,
+          "sound":"pretzel"
+         },
+         {"name": "Standing hamstring stretch",
+          "duration": 120,
+          "sound":"standinghamstring"
+         },
+         {"name": "Lower back stretch",
+          "duration": 60,
+          "sound":"lowerback"
+         }
+     ]
+    }
+  ]
+}

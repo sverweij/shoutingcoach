@@ -1,0 +1,41 @@
+{
+  "name": "shoutingcoach",
+  "version": "1.0.0",
+  "description": "helps you work out",
+  "dependencies":{
+      "amdefine": "^0.1.0", 
+      "requirejs": "^2.1.17"
+  },
+  "devDependencies": {
+      "node-sass": "^2.1.1", 
+      "mocha": "^2.2.4", 
+      "codeclimate-test-reporter": "^0.0.4", 
+      "jshint": "^2.7.0", 
+      "istanbul": "^0.3.13", 
+      "plato": "^1.4.0", 
+      "nsp": "^1.0.1"      
+  },
+  "main": "build.workout.js",
+  "scripts": {
+    "test": "mocha -R dot src/script/test/",
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha src/script/test", 
+    "nsp": "nsp package", 
+    "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/", 
+    "lint": "jshint src/script --verbose --show-non-errors", 
+    "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info"
+  },
+  "keywords": [
+    "workout",
+    "fitness"
+  ],
+  "repository": {
+    "type": "git", 
+    "url": "https://github.com/sverweij/shoutingcoach"
+  },
+  "bugs": {
+    "url": "https://github.com/sverweij/shoutingcoach/issues"
+  }, 
+  "homepage": "https://sverweij.github.io/shoutingcoach",
+  "author": "Sander Verweij",
+  "license": "GPLv3"
+}
