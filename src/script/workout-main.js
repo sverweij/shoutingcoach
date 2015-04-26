@@ -6,18 +6,15 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
 
     var REFRESHAFTERMS = 50;
 
-    var SPACE_KEY = 32;
-    var ENTER_KEY = 13;
-    var ESC_KEY   = 27;
-    var R_KEY     = 82;
-    var S_KEY     = 83;
-    var COMMA_KEY = 188;
-
-    /* for use with logitech remote */
-    var PGDN_KEY  = 34;
-    var DOT_KEY   = 190;
-
-    var soundEnabled = false;
+    var key2action = {
+         13 : startStopKeyPress, //ENTER
+         34 : startStopKeyPress, //PGDN
+         32 : startStopKeyPress, //SPACE
+         82 : resetKeyPress, //R
+        190 : resetKeyPress, //DOT
+         27 : resetKeyPress,//ESC
+        188 : workoutOnclick //COMMA
+    };
 
     var myCanvas     = document.getElementById("bgcanvas");
 
@@ -79,40 +76,10 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
             change : workoutListOnchange,
         });
         $("#workout").bind("click", workoutOnclick);
-        $("#ToggleSound").bind("click", toggleSoundOnclick);
         $("body").bind({
             keydown : function(e) {
-                var lKey = e.keyCode;
-                // var lTarget = $(e.currentTarget);
-                
-                switch(lKey) {
-                    case (ENTER_KEY) :
-                    case (PGDN_KEY) :
-                    case (SPACE_KEY) : { 
-                            if (!startStopButtonPressing){
-                                startStopOnclick();
-                            }
-                        }
-                        break; 
-                    case (S_KEY) : {
-                            toggleSoundOnclick();
-                        }
-                        break;
-                    case (R_KEY) : 
-                    case (DOT_KEY) : 
-                    case (ESC_KEY) : { 
-                            if (!resetButtonPressing){
-                                resetOnclick();
-                            }
-                        }
-                        break; 
-                    case (COMMA_KEY):{
-                            workoutOnclick();
-                        }
-                        break;
-                    default : {
-                        break;
-                    }
+                if(key2action[e.keyCode]){
+                    key2action[e.keyCode]();
                 }
             }
         });
@@ -123,6 +90,12 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     function workoutOnclick() {
         $("#settings").slideToggle("fast");
         $("#workout").slideToggle("fast");
+    }
+
+    function startStopKeyPress(){ 
+        if (!startStopButtonPressing){
+            startStopOnclick();
+        }
     }
 
     function startStopOnclick() {
@@ -136,6 +109,12 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
         } 
     }
 
+    function resetKeyPress(){
+        if (!resetButtonPressing){
+            resetOnclick();
+        }
+    }
+    
     function resetOnclick() {
         if (UIEnabled) {
             currentWorkout.reset();
@@ -143,14 +122,8 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
             initExercise(currentWorkout.currentExercise().name,
                     currentWorkout.currentExercise().duration);
             showCurrentState();
-            showSettingState();
             refresh();
         } 
-    }
-
-    function toggleSoundOnclick() {
-        soundEnabled = !soundEnabled;
-        showSettingState();
     }
 
     function workoutListOnchange() {
@@ -160,9 +133,7 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
         initExercise(currentWorkout.exercises[0].name,
                 currentWorkout.exercises[0].duration);
         showCurrentState();
-        showSettingState();
         workoutOnclick();
-
     }
 
     function parseWorkoutJSON(pEvent) {
@@ -196,7 +167,6 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     }
 
     function showExerciseTime(pMilliSeconds) {
-        if (!pMilliSeconds) { pMilliSeconds = 0;}
         window.exercisetime.textContent = timeutensils.formatTime(pMilliSeconds);
         exerciseGauge.draw(pMilliSeconds);
     }
@@ -208,7 +178,6 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     }
 
     function showWorkoutTime(pMilliSeconds) {
-        if (!pMilliSeconds) { pMilliSeconds = 0;}
         window.workouttime.textContent = timeutensils.formatTime(pMilliSeconds);
         workoutGauge.draw(pMilliSeconds);
         document.title =
@@ -254,13 +223,13 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
     function playSound(){
         if (currentWorkout.beep){
             if (currentWorkout.currentExercise().sound) {
-                var _customSound = new buzz.sound(
+                var customSound = new buzz.sound(
                     "audio/" + currentWorkout.currentExercise().sound,
                     {
                         autoplay: true
                     }
                 );                
-                _customSound.bindOnce("error", function() {
+                customSound.bindOnce("error", function() {
                     beepSound.play();    
                 });
             } else {
@@ -279,15 +248,6 @@ require(["xaja", "timeutensils", "gauges", "workout","../lib/buzz", "jquery" ],
             playSound();    
             updateStartStopButtonState();
         }
-    }
-
-    function showSettingState () {
-        if (soundEnabled){
-            window.ToggleSound.checked="soundOn";
-        } else { 
-            window.ToggleSound.checked=null;
-        }
-
     }
 
     function refreshRunning(){
