@@ -121,12 +121,6 @@ div.numbers {
     background-color : #252525;
 }
 @media screen and (max-width: 29em) {
-    /*
-    #workout {
-        font-size    : 1.2em;
-    }
-        */
-
     #CloseSettings {
         text-align   : right;
         width        : 100%;
