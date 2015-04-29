@@ -1,4 +1,6 @@
+languages:
+  JavaScript: true
 exclude_paths:
-- src/lib/*
-- src/script/fe/jquery.js
-- src/script/test/*
+  - src/lib/*
+  - src/script/fe/jquery.js
+  - src/script/test/*
