@@ -16,9 +16,9 @@ branches:
   only:
     - master
 
-# addons:
-   # code_climate:
-     # repo_token: 9b560c614bf2fb292d5bf265a7b0bc8d201f4b339842cd8cd4adc95a015a6451
-# 
-# after_success:
-  # - npm run codeclimate-cover-submit
+addons:
+   code_climate:
+     repo_token: 9b560c614bf2fb292d5bf265a7b0bc8d201f4b339842cd8cd4adc95a015a6451
+
+after_success:
+  - npm run codeclimate-cover-submit
