@@ -1,10 +1,13 @@
 var assert = require("assert");
 var wo = require("../be/workout");
 
-describe('wo', function() {
-    describe('#aWorkoutFunction', function() {
-        xit('should test something', function() {
-            assert.equal("found", "expected");
+describe('workout', function() {
+    describe('#constructor', function() {
+
+        xit("should initiate an workout with status 'reset'", function() {
+            var lWorkout = new wo.Workout("test workout");
+            console.log(JSON.stringify(lWorkout, null, "  "));
+            assert.equal(lWorkout.getState(), "reset");
         });
     });
 });

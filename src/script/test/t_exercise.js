@@ -2,9 +2,10 @@ var assert = require("assert");
 var ex = require("../be/exercise");
 
 describe('exercise', function() {
-    describe('#anExerciseFunction', function() {
-        xit('should test something', function() {
-            assert.equal("found", "expected");
+    describe('#construction', function() {
+        it("should initiate an workout with status 'reset'", function() {
+            var lExercise = new ex.Exercise("test exercise");
+            assert.equal(lExercise.getState(), "reset");
         });
     });
 });
