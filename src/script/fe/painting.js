@@ -76,7 +76,7 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
             });
             $("#WorkoutList").append("<option value=\"" + pWorkoutNr +  "\">" +
                     workouts[workouts.length-1].name + " (" +
-                    timeutensils.formatTime(workouts[workouts.length-1].duration) + ")" +
+                    timeutensils.formatDuration(workouts[workouts.length-1].duration) + ")" +
                     "</option>");
 
         });
@@ -92,7 +92,7 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
     }
 
     function showExerciseTime(pMilliSeconds) {
-        window.exercisetime.textContent = timeutensils.formatTime(pMilliSeconds);
+        window.exercisetime.textContent = timeutensils.formatDuration(pMilliSeconds);
         exerciseGauge.draw(pMilliSeconds);
     }
 
@@ -103,13 +103,13 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
     }
 
     function showWorkoutTime(pMilliSeconds) {
-        window.workouttime.textContent = timeutensils.formatTime(pMilliSeconds);
+        window.workouttime.textContent = timeutensils.formatDuration(pMilliSeconds);
         workoutGauge.draw(pMilliSeconds);
         document.title =
             "-" +
-            timeutensils.formatTime(currentWorkout.timeLeft()) +
+            timeutensils.formatDuration(currentWorkout.timeLeft()) +
             "/ " +
-            timeutensils.formatTime(currentWorkout.duration);
+            timeutensils.formatDuration(currentWorkout.duration);
     }
 
     function initWorkout (pName, pDuration) {

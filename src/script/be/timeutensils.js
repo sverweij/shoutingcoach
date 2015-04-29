@@ -1,38 +1,54 @@
-/* global define */
+/* jshint node:true */
+if ( typeof define !== 'function') {
+    var define = require('amdefine')(module);
+}
+
 define(function (){
     "use strict";
     // private functions
+    var MILLISECONDS_PER_SECOND = 1000; // milliseconds
+    var SECONDS_PER_MINUTE      = 60; // seconds
+    var MINUTES_PER_HOUR        = 60; // minutes
+    var HOURS_PER_DAY           = 24; // hours
+
     function millisToTimeStruct (pMilliSeconds) {
-        var lSeconds     = pMilliSeconds/ 1000;
-        var lMinutes     = lSeconds/ 60;
+        var lSeconds = pMilliSeconds/ MILLISECONDS_PER_SECOND;
+        var lMinutes = Math.max(0, lSeconds/ SECONDS_PER_MINUTE);
+        var lHours   = Math.max(0, lMinutes/ MINUTES_PER_HOUR);
+        var lDays    = Math.max(0, lHours/ HOURS_PER_DAY);
 
-        var lMilliSeconds = pMilliSeconds - (Math.floor(lSeconds)*1000);
-        lSeconds     = lSeconds - (Math.floor(lMinutes) * 60);
+        var lMilliSeconds = Math.max(0, pMilliSeconds - (Math.floor(lSeconds)*MILLISECONDS_PER_SECOND));
+        lSeconds     = Math.max(0, lSeconds - (Math.floor(lMinutes) * SECONDS_PER_MINUTE));
+        lMinutes     = Math.max(0, lMinutes - (Math.floor(lHours) * MINUTES_PER_HOUR));
+        lHours       = Math.max(0, lHours - (Math.floor(lDays) * HOURS_PER_DAY));
 
-        return {"minutes" : Math.floor(lMinutes),
-                "seconds" : Math.floor(lSeconds),
-                "milliseconds" : lMilliSeconds
-        };
-    }
+        return {
+            "days"         : Math.floor(lDays),
+            "hours"        : Math.floor(lHours),
+            "minutes"      : Math.floor(lMinutes),
+            "seconds"      : Math.floor(lSeconds),
+            "milliseconds" : lMilliSeconds
+        };  
+    }   
 
     function formatTimeBlob (pInt) {
         if (pInt < 10) {
             return "0" + pInt;
-        }
+        }   
         return pInt.toString();
     }
     
     // private functions
     return {
-        formatTime : function (pMilliSeconds, pShowMillis) {
-            if (!pMilliSeconds){
-                pMilliSeconds = 0;
-            }
+        formatDuration : function (pMilliSeconds, pShowMillis) {
             var lTimeStruct = millisToTimeStruct(pMilliSeconds);
             if (!pShowMillis) { pShowMillis = false; }
-            return formatTimeBlob (lTimeStruct.minutes) + ":" +
+            var lRetval =
+                   (lTimeStruct.hours > 0 ? lTimeStruct.hours + ":" : "") +
+                   formatTimeBlob (lTimeStruct.minutes) + ":" +
                    formatTimeBlob (lTimeStruct.seconds) +
                    (pShowMillis ? "." + lTimeStruct.milliseconds: "");
+            return lRetval;
         }
     };
 }); // define
