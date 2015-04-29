@@ -6,6 +6,7 @@
       "requirejs": "^2.1.17"
   },
   "devDependencies": {
+      "amdefine": "^0.1.0",
       "mocha": "^2.2.4", 
       "codeclimate-test-reporter": "^0.0.4", 
       "jshint": "^2.7.0", 
