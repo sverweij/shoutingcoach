@@ -17,10 +17,10 @@ these MIT licensed libraries:
 ### licensed
 [GPLv3](LICENSE)
 
-### flair section
+### flair
 [![Build Status](https://travis-ci.org/sverweij/shoutingcoach.svg?branch=master)](https://travis-ci.org/sverweij/shoutingcoach)
 [![Code Climate](https://codeclimate.com/github/sverweij/shoutingcoach/badges/gpa.svg)](https://codeclimate.com/github/sverweij/shoutingcoach)
 [![Dependency Status](https://david-dm.org/sverweij/shoutingcoach.svg)](https://david-dm.org/sverweij/shoutingcoach)
 [![devDependency Status](https://david-dm.org/sverweij/shoutingcoach/dev-status.svg)](https://david-dm.org/sverweij/shoutingcoach#info=devDependencies)
 
-So no fr*king code coverage yet? You've got _that_ right.
+So no fr*king code coverage? No. [But working on it](https://github.com/sverweij/shoutingcoach/tree/master/src/script/test).
