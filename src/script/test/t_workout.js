@@ -4,9 +4,12 @@ var wo = require("../be/workout");
 describe('workout', function() {
     describe('#constructor', function() {
 
-        xit("should initiate an workout with status 'reset'", function() {
+        it("should initiate a workout with status 'reset'", function() {
             var lWorkout = new wo.Workout("test workout");
-            console.log(JSON.stringify(lWorkout, null, "  "));
+            lWorkout.add("first exercise", 1);
+            lWorkout.add("second exercise - with sound", 1, "withsound.ogg");
+            lWorkout.add("last exercise", 1);
+            lWorkout.reset();
             assert.equal(lWorkout.getState(), "reset");
         });
     });
