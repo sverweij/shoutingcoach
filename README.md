@@ -20,7 +20,8 @@ these MIT licensed libraries:
 ### flair
 [![Build Status](https://travis-ci.org/sverweij/shoutingcoach.svg?branch=master)](https://travis-ci.org/sverweij/shoutingcoach)
 [![Code Climate](https://codeclimate.com/github/sverweij/shoutingcoach/badges/gpa.svg)](https://codeclimate.com/github/sverweij/shoutingcoach)
+[![Test Coverage](https://codeclimate.com/github/sverweij/shoutingcoach/badges/coverage.svg)](https://codeclimate.com/github/sverweij/shoutingcoach)
 [![Dependency Status](https://david-dm.org/sverweij/shoutingcoach.svg)](https://david-dm.org/sverweij/shoutingcoach)
 [![devDependency Status](https://david-dm.org/sverweij/shoutingcoach/dev-status.svg)](https://david-dm.org/sverweij/shoutingcoach#info=devDependencies)
 
-So no fr*king code coverage? No. [But working on it](https://github.com/sverweij/shoutingcoach/tree/master/src/script/test).
+So code coverage < 90%? Yep. [Working on it](https://github.com/sverweij/shoutingcoach/tree/master/src/script/test).
