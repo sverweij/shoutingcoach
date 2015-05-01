@@ -6,6 +6,9 @@ node_js:
 #  - "0.12"
   - "iojs"
 
+install:
+  - npm install
+  
 script:
   - npm run lint
   - npm run cover
@@ -13,8 +16,12 @@ script:
   - npm run build
 
 branches:
-  only:
-    - master
+  except:
+    - gh-pages
+
+cache:
+  directories:
+    - node_modules
 
 addons:
    code_climate:
