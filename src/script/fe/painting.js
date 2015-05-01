@@ -1,5 +1,5 @@
 /* jshint browser:true */
-/* global define, buzz */
+/* global define */
 define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jquery" ],
         function(timeutensils, gauges, workout, buzz, $) {
             "use strict";
