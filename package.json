@@ -10,7 +10,7 @@
       "mocha": "^2.2.4", 
       "codeclimate-test-reporter": "^0.0.4", 
       "jshint": "^2.7.0", 
-      "istanbul": "^0.3.13", 
+      "istanbul": "^0.3.14", 
       "plato": "^1.4.0", 
       "nsp": "^1.0.1"      
   },
