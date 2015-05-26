@@ -1,12 +1,16 @@
 ### SHOUTING COACH :loudspeaker:
 
-Excercising app. Helps me work out. Created because other apps 
-- didn't let me create a custom workout    
+![screenshot](images/shoutingcoach.png)
+
+Excercising app. Helps me work out. Created because other apps ...
+- didn't let me create a **custom workout**    
   so I can change that one impossible 'spine cracker cross crunches' with something doable
-- didn't blow up on HUGE SCREENS   
+- didn't blow up on **HUGE SCREENS**   
   so I can read it without glasses
-- didn't have BIG BUTTONS and hard to miss keyboard short cuts    
+- didn't have **BIG BUTTONS** and hard to miss keyboard short cuts    
   hitting tiny buttons when you're working out is hard
+- didn't **talk** to me    
+  When I'm doing push-ups I'm not watching the frikkin screen, yo.
 
 ### uses
 these MIT licensed libraries:
