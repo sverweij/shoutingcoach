@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "helps you work out",
   "dependencies":{
-      "requirejs": "^2.1.17"
+      "requirejs": "^2.1.18"
   },
   "devDependencies": {
       "amdefine": "^0.1.0",
