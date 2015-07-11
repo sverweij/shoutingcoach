@@ -20,17 +20,33 @@ input[type='button'] {
     border-radius    : 0.3em;
     font-family      : inherit;
 }
-@media screen and (min-width: 49em) {
-    body { font-size : 30pt; }
+@media screen and (min-width: 1441px){
+    body { font-size : 72pt; }
 }
-@media screen and (min-width: 69em) {
+@media screen and (min-width: 1281px) and (max-width: 1440px){
+    body { font-size : 64pt;}
+}
+@media screen and (min-width: 1025px) and (max-width: 1280px){
+    body { font-size : 52pt; }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px){
+    body { font-size : 48pt; }
+}
+@media screen and (min-width: 641px) and (max-width: 768px){
     body { font-size : 40pt; }
 }
-@media screen and (min-width: 79em) {
-    body { font-size : 53pt; }
+@media screen and (min-width: 481px) and (max-width: 640px){
+    body { font-size : 30pt; }
 }
-@media screen and (max-width: 29em) {
-    body { font-size : 12pt; }
+@media screen and (min-width: 321px) and (max-width: 480px) {
+    body { font-size : 22pt; }
+
+    .hideonmobile {
+        display          : none;
+    }
+}
+@media screen and (max-width: 320px){
+    body { font-size : 18pt; }
 
     .hideonmobile {
         display          : none;
@@ -120,7 +136,7 @@ div.numbers {
     color            : #444;
     background-color : #252525;
 }
-@media screen and (max-width: 29em) {
+@media screen and (max-width: 480px) {
     #CloseSettings {
         text-align   : right;
         width        : 100%;

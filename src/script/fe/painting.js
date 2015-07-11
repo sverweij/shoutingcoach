@@ -10,7 +10,7 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
 
     var circleRadius = myCanvas.height/2;
     var gaugeCoords  = {x: myCanvas.width/2, y: myCanvas.height/2};
-    var gaugeColors  = {primary:"#333", secondary:"black", background:"black"};
+    var gaugeColors  = {primary:"#777", secondary:"black", background:"black"};
     var exerciseGauge = new gauges.CircleGauge (myCanvas, 120000, gaugeCoords, circleRadius/1.0, gaugeColors);
     var workoutGauge = new gauges.DiskGauge (myCanvas, 60000, gaugeCoords, circleRadius/2, gaugeColors);
 
