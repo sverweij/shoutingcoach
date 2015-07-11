@@ -118,6 +118,101 @@
         }
     ]
     },
+    {"name":"The not so scientific 7-minute workout",
+    "exercises":[
+        {"name":"Exercise one",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise two",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise three",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise four",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise five",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise six",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise six",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise seven",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise eight",
+         "duration": 30
+        },
+        {"name":"Exercise nine",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise ten - left",
+         "categories": ["lower body"],
+         "duration": 15
+        },
+        {"name":"Exercise ten - right",
+         "categories": ["lower body"],
+         "duration": 15,
+         "sound":"switchsides"
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise eleven",
+         "duration": 30
+        },
+        {"name":"Recover",
+         "duration": 10,
+         "sound":"recover"
+        },
+        {"name":"Exercise twelve - left",
+         "duration": 15
+        },
+        {"name":"Exercise twelve - right",
+         "categories": ["core"],
+         "duration": 15,
+         "sound":"switchsides"
+        }
+    ]
+    },    
     {"name": "Sunday drill",
      "exercises":[
          {"name": "Warming up - run in place",
