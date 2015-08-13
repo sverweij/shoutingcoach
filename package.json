@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "helps you work out",
   "dependencies":{
-      "requirejs": "^2.1.20"
+      "requirejs": "2.1.20"
   },
   "devDependencies": {
-      "amdefine": "^1.0.0",
-      "mocha": "^2.2.5", 
-      "codeclimate-test-reporter": "^0.1.0", 
-      "jshint": "^2.8.0", 
-      "istanbul": "^0.3.17",
-      "plato": "^1.5.0", 
-      "nsp": "^1.0.3"
+      "amdefine": "1.0.0",
+      "mocha": "2.2.5", 
+      "codeclimate-test-reporter": "0.1.0", 
+      "jshint": "2.8.0", 
+      "istanbul": "0.3.17",
+      "plato": "1.5.0", 
+      "nsp": "1.0.3"
   },
   "scripts": {
     "test": "mocha -R dot src/script/test/",
