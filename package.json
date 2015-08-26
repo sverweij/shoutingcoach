@@ -10,14 +10,15 @@
       "mocha": "2.2.5", 
       "codeclimate-test-reporter": "0.1.0", 
       "jshint": "2.8.0", 
-      "istanbul": "0.3.17",
+      "istanbul": "0.3.18",
       "plato": "1.5.0", 
-      "nsp": "1.0.3"
+      "nsp": "1.1.0"
   },
   "scripts": {
     "test": "mocha -R dot src/script/test/",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha src/script/test", 
     "nsp": "nsp package", 
+    "fullcheck": "npm run lint && npm run test && npm outdated && npm run nsp",
     "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/", 
     "lint": "jshint src/script --verbose --show-non-errors", 
     "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
