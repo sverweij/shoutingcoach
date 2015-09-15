@@ -56,6 +56,13 @@ define(["./exercise"], function(exercise) {
     Workout.prototype.currentExercise = function () {
         return this.exercises[this.currentExerciseIndex];
     };
+    
+    Workout.prototype.nextExercise = function () {
+        if (this.currentExerciseIndex + 1 < this.exercises.length){
+            return this.exercises[this.currentExerciseIndex + 1];
+        }
+        return null;
+    };
 
     Workout.prototype.next = function() {
         var lRetval = false;

@@ -31,7 +31,7 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
 
     function startStopOnclick() {
         if (UIEnabled) {
-            initWorkout(currentWorkout.name, currentWorkout.duration);
+            initNextExercise(currentWorkout.nextExercise(), currentWorkout.duration);
             currentWorkout.toggle();
             initExercise(currentWorkout.currentExercise().name,
                     currentWorkout.currentExercise().duration);
@@ -174,7 +174,13 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
             updateStartStopButtonState();
         }
     }
-
+    function initNextExercise(pNextExercise, pDuration){
+        if (!!pNextExercise){
+            initWorkout("next: " + pNextExercise.name, pDuration);
+        } else {
+            initWorkout("done", pDuration);
+        }
+    }
     function refreshRunning(){
         if (currentWorkout.currentExercise().getState()!=="done"){
             showCurrentState();
@@ -184,13 +190,14 @@ define(["../be/timeutensils", "./gauges", "../be/workout","../../lib/buzz", "jqu
             if (currentWorkout.next()) {
                 initExercise(currentWorkout.currentExercise().name,
                         currentWorkout.currentExercise().duration);
+                initNextExercise(currentWorkout.nextExercise(), currentWorkout.duration);
+                
                 currentWorkout.currentExercise().start();
                 showCurrentState();
                 clearTimeout(timeoutID);
                 timeoutID = setTimeout(refresh, REFRESHAFTERMS);
             } 
         }
-        
     }
     
     function refreshDone(){
