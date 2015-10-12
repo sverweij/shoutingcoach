@@ -1,27 +1,27 @@
 {
   "name": "shoutingcoach",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "helps you work out",
-  "dependencies":{
-      "requirejs": "2.1.20"
+  "dependencies": {
+    "requirejs": "2.1.20"
   },
   "devDependencies": {
-      "amdefine": "1.0.0",
-      "codeclimate-test-reporter": "0.1.1", 
-      "istanbul": "0.3.22",
-      "jshint": "2.8.0", 
-      "mocha": "2.3.3", 
-      "npm-check-updates": "2.3.0",
-      "nsp": "1.1.0",
-      "plato": "1.5.0" 
+    "amdefine": "1.0.0",
+    "codeclimate-test-reporter": "0.1.1",
+    "istanbul": "0.3.22",
+    "jshint": "2.8.0",
+    "mocha": "2.3.3",
+    "npm-check-updates": "2.3.0",
+    "nsp": "1.1.0",
+    "plato": "1.5.0"
   },
   "scripts": {
     "test": "mocha -R dot src/script/test/",
-    "cover": "istanbul cover node_modules/mocha/bin/_mocha src/script/test", 
-    "nsp": "nsp package", 
+    "cover": "istanbul cover node_modules/mocha/bin/_mocha src/script/test",
+    "nsp": "nsp package",
     "fullcheck": "npm run lint && npm run test && npm outdated && npm run nsp",
-    "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/", 
-    "lint": "jshint src/script --verbose --show-non-errors", 
+    "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/",
+    "lint": "jshint src/script --verbose --show-non-errors",
     "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
     "npm-check-updates": "ncu --upgrade",
     "clean": "rm -rf build/style build/audio build/script build/lib build/index.html build/workouts.json",
@@ -38,12 +38,12 @@
     "coach"
   ],
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "https://github.com/sverweij/shoutingcoach"
   },
   "bugs": {
     "url": "https://github.com/sverweij/shoutingcoach/issues"
-  }, 
+  },
   "homepage": "https://sverweij.github.io/shoutingcoach",
   "author": "Sander Verweij",
   "license": "GPL-3.0"
