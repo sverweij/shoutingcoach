@@ -28,7 +28,7 @@
     "build-au": "cp -R src/audio build/audio",
     "build-style": "cp -R src/style build/style",
     "build-html": "cp src/index.html build/. && cp src/workouts.json build/.",
-    "build-lib": "mkdir build/lib && cp -R src/lib/require.js build/lib/require.js",
+    "build-lib": "mkdir -p build/lib && cp -R src/lib/require.js build/lib/require.js",
     "build-js": "r.js -o baseUrl=\"./src/script\" name=\"shoutingcoach\" out=\"build/script/shoutingcoach.js\"",
     "build": "npm run build-js && npm run build-style && npm run build-html && npm run build-lib && npm run build-au"
   },
