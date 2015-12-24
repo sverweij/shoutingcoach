@@ -12,8 +12,8 @@
     "js-makedepend": "0.1.10",
     "jshint": "2.8.0",
     "mocha": "2.3.4",
-    "npm-check-updates": "2.5.4",
-    "nsp": "2.1.0",
+    "npm-check-updates": "2.5.5",
+    "nsp": "2.2.0",
     "plato": "1.5.0"
   },
   "scripts": {
@@ -24,7 +24,7 @@
     "plato": "plato -r -d platoreports -x \"test|jquery\" src/script/",
     "lint": "jshint src/script --verbose --show-non-errors",
     "codeclimate-cover-submit": "node node_modules/codeclimate-test-reporter/bin/codeclimate.js < coverage/lcov.info",
-    "npm-check-updates": "ncu --upgrade",
+    "npm-check-updates": "ncu '/^(?!jshint).*$/' --upgrade",
     "build-au": "cp -R src/audio build/audio",
     "build-style": "cp -R src/style build/style",
     "build-html": "cp src/index.html build/. && cp src/workouts.json build/.",
