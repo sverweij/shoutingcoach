@@ -3,17 +3,17 @@
   "version": "1.0.1",
   "description": "helps you work out",
   "dependencies": {
-    "requirejs": "2.1.22"
+    "requirejs": "2.2.0"
   },
   "devDependencies": {
     "amdefine": "1.0.0",
     "codeclimate-test-reporter": "0.3.1",
-    "istanbul": "0.4.2",
-    "js-makedepend": "0.2.0",
+    "istanbul": "0.4.3",
+    "js-makedepend": "0.2.3",
     "jshint": "2.9.1",
     "mocha": "2.4.5",
-    "npm-check-updates": "2.5.8",
-    "nsp": "2.2.0",
+    "npm-check-updates": "2.6.2",
+    "nsp": "2.3.0",
     "plato": "1.5.0"
   },
   "scripts": {
