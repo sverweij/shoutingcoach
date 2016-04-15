@@ -1,6 +1,6 @@
 {
   "name": "shoutingcoach",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "helps you work out",
   "dependencies": {
     "requirejs": "2.2.0"
