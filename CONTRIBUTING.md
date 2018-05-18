@@ -27,7 +27,7 @@ To make this as easy as possible for you, here's some simple guidelines:
     - Code style (you know, petty things like indentations, where brackets go, how variables &
       parameters are named) fits in with the current code base.
 - Plan to do something drastic?     
-  Contact @SanderSpeaks on Twitter, or leave an [issue](https://github.com/sverweij/shoutingcoach/issues/new) on GitHub
+  Leave an [issue](https://github.com/sverweij/shoutingcoach/issues/new) on GitHub
 
 ### Legal
 - the code you add will be subject to [GPLv3](wikum/licenses/license.shoutingcoach.md
